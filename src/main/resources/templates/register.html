@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" action="#" data-th-action="@{/register}" data-th-object="${person}">
+        
+        <label for="name">Name</label>
+        <input type="text" name="name" data-th-field="*{name}">
+        <!-- show error if name is null -->
+        <!-- #fields abstraction -->
+        <span data-th-if="${#fields.hasErrors('name')}" data-th-error="*{name}"></span>
+        <br>
+        <label for="email">Email</label>
+        <input type="email" name="email" data-th-field="*{email}">
+        <br>
+        <label for="age">Age</label>
+        <input type="number" name="age" data-th-field="*{age}">
+        <br>
+        <label for="hobbies">Hobbies</label>
+        <input type="checkbox" name="hobbies" value="1" data-th-field="*{hobbies}">Sleep</input>
+        <input type="checkbox" name="hobbies" value="2" data-th-field="*{hobbies}">Eating</input>
+        <br>
+        <input type="radio" name="isMarried" data-th-field="*{isMarried}" value="1">Are you married?</input>
+        <br>
+        <label for="dob">Date of Birth</label>
+        <input type="date" name="dob" data-th-field="*{dob}">
+        <br>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

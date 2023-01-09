@@ -10,6 +10,7 @@ import static sg.edu.nus.iss.app.ssfworkshop13.utils.IOUtil.*;
 
 @SpringBootApplication
 public class SsfWorkshop13Application {
+	public static String errMsg = "Use mvn spring-boot:run -Dspring-boot.run.arguments=--dataDir=... to set data directory of the Address book";
 
 	public static void main(String[] args) {
 		// SpringApplication.run(SsfWorkshop13Application.class, args);
@@ -23,6 +24,7 @@ public class SsfWorkshop13Application {
 			// imported method from IOUtil to create directory
 			createDir(opsVal.get(0));
 		} else {
+			System.err.println(errMsg);
 			System.exit(1);
 		}
 		app.run(args);

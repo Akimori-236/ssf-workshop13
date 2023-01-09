@@ -62,11 +62,10 @@ public class Contacts {
         // if there is a argument, get the value
         if (optNamesArr.length > 0) {
             // do we need to check the argument name???
-            appArgs.getOptionValues(optNamesArr[0]);
+            optValues = appArgs.getOptionValues(optNamesArr[0]);
             // optValuesArr = optValues.toArray(new String[optValues.size()]);
             dataDirResult = optValues.get(0);
         } else {
-
             dataDirResult = defaultDataDir;
         }
 

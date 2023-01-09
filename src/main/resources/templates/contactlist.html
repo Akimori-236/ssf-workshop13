@@ -7,9 +7,17 @@
         <title>List of Contacts</title>
     </head>
     <body>
+        <h1>List of Contacts</h1>
         <div>
             <ul data-th-each="contact : ${contactList}">
-                <a data-th-object="${contact}" data-th-href="'/addressbook/' + *{id}"><span data-th-text="*{name}"></span></a>
+                <h2 data-th-if="${contactList.size == 0}">
+                    There is no saved contacts.
+                </h2>
+                <li data-th-object="${contact}">
+                    <a data-th-href="'/addressbook/' + *{id}"
+                        ><span data-th-text="*{name}"></span
+                    ></a>
+                </li>
             </ul>
         </div>
     </body>

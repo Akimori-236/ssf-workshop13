@@ -76,4 +76,10 @@ public class AddressbookController {
         contacts.getContactByID(model, contactID, appArgs, DEFAULT_DIR);
         return "result";
     }
+
+    @GetMapping(path="/list")
+    public String getContactList(Model model) {
+        contacts.getAllContacts(model, appArgs, DEFAULT_DIR);
+        return "contactlist";
+    }
 }

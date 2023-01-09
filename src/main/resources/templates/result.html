@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body data-th-object="${contact}">
-    <h1>Your contact info</h1>
-    <p>
-        id:
-        <p data-th-text="*{id}"></p>
-    </p>
-    <p>
-        name:
-        <p data-th-text="*{name}"></p>
-    </p>
-    <p>
-        email:
-        <p data-th-text="*{email}"></p>
-    </p>
-    <p>
-        Date of Birth:
-        <p data-th-text="*{dob}"></p>
-    </p>
-    <p>
-        Phone Number:
-        <p data-th-text="*{phoneNumber}"></p>
-    </p>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body data-th-object="${contact}">
+        <h1>Your contact info</h1>
+        <p>
+            <strong>ID:</strong>
+            <span data-th-text="*{id}"></span>
+        </p>
+        <p>
+            <strong>Name:</strong>
+            <span data-th-text="*{name}"></span>
+        </p>
+        <p>
+            <strong>Email:</strong>
+            <span data-th-text="*{email}"></span>
+        </p>
+        <p>
+            <strong>Date of Birth:</strong>
+            <span data-th-text="*{dob}"></span>
+        </p>
+        <p>
+            <strong>Phone Number:</strong>
+            <span data-th-text="*{phoneNumber}"></span>
+        </p>
+    </body>
 </html>
